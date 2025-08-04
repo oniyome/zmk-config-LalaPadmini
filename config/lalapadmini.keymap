@@ -262,10 +262,10 @@
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH     &kp DOLLAR                   &kp PERCENT                    &kp KP_COMMA     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
-&kp F2           &kp F4       &kp F6       &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &kp KP_DOT       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK
-&trans           &trans       &kp LS(F10)  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
-&trans           &trans                    &trans                       &trans                         &kp DELETE       &trans                            &none            &kp KP_PLUS
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH     &kp DOLLAR                   &kp PERCENT                    &kp EQUAL            &mt AMPERSAND NUMBER_7    &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &kp PLUS
+&kp F2           &kp F4       &kp F6       &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &mt SEMICOLON COLON  &mt DOLLAR NUMBER_4       &mt PERCENT NUMBER_5   &mt LCTRL NUMBER_6             &kp MINUS
+&trans           &trans       &kp LS(F10)  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp NUMBER_0         &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2   &mt HASH NUMBER_3              &trans
+&trans           &trans                    &trans                       &trans                         &obs_insert          &obs_space                                       &trans                         &trans
             >;
         };
 

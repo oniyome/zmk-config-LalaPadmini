@@ -264,18 +264,18 @@
             bindings = <
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH     &kp DOLLAR                   &kp PERCENT                    &kp EQUAL            &mt AMPERSAND NUMBER_7    &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &kp PLUS
 &kp F2           &kp F4       &kp F6       &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &mt SEMICOLON COLON  &mt DOLLAR NUMBER_4       &mt PERCENT NUMBER_5   &mt LCTRL NUMBER_6             &kp MINUS
-&trans           &trans       &kp LS(F10)  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp NUMBER_0         &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2   &mt HASH NUMBER_3              &trans
-&trans           &trans                    &trans                       &trans                         &obs_insert          &obs_space                                       &trans                         &trans
+&caps_word       &trans       &kp LS(F10)  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp NUMBER_0         &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2   &mt HASH NUMBER_3              &trans
+&trans           &trans                    &kp LC(NUMBER_1)             &trans                         &obs_insert          &obs_space                                       &trans                         &trans
             >;
         };
 
         TERTIARY_LAYER {
             display-name = "tertiary_layer";
             bindings = <
-&kp EXCLAMATION       &kp AT_SIGN        &kp HASH      &kp DOLLAR            &kp PERCENT            &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &kp PRINTSCREEN
-&kp CARET             &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &none
-&mt LEFT_SHIFT TILDE  &kp DOUBLE_QUOTES  &kp COLON     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH  &mkp MB4  &none         &mkp MB5   &kp RIGHT_SHIFT
-&trans                &trans                           &trans                &trans                 &trans         &trans                  &trans     &trans
+&kp CARET      &mkp LCLK              &mmv MOVE_UP    &mkp RCLK        &trans         &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &kp PRINTSCREEN
+&kp GRAVE      &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans         &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &none
+&mt PIPE BSLH  &mt SQT DOUBLE_QUOTES  &mkp MCLK       &trans           &trans         &kp BACKSLASH  &mkp MB4  &none         &mkp MB5   &kp RIGHT_SHIFT
+&trans         &trans                                 &kp LA(ENTER)    &kp LC(ENTER)  &trans         &trans                  &trans     &trans
             >;
 
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;

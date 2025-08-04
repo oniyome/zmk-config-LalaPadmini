@@ -187,6 +187,34 @@
             bindings = <&kp LS(T) &kp O &kp K &kp A &kp UNDER &kp NUMBER_0 &kp NUMBER_0 &kp NUMBER_9 &kp NUMBER_2 &kp NUMBER_1 &kp RET>;
             label = "TOKA";
         };
+
+        gmail_clear: gmail_clear {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp ESCAPE &kp G &kp I &kp G &kp I>;
+            label = "GMAIL_CLEAR";
+        };
+
+        obs_insert: obs_insert {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp ESCAPE &kp A &kp LC(SPACE)>;
+            label = "OBS_INSERT";
+        };
+
+        obs_space: obs_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp I &kp SPACE &kp ESCAPE>;
+            label = "OBS_SPACE";
+        };
+
+        obs_fix2: obs_fix2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET &kp ESCAPE &kp ESCAPE>;
+            label = "OBS_FIX2";
+        };
     };
 
     keymap {

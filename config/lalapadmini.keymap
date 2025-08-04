@@ -272,10 +272,10 @@
         TERTIARY_LAYER {
             display-name = "tertiary_layer";
             bindings = <
-&kp CARET      &mkp LCLK              &mmv MOVE_UP    &mkp RCLK        &trans         &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &kp PRINTSCREEN
-&kp GRAVE      &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans         &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &none
-&mt PIPE BSLH  &mt SQT DOUBLE_QUOTES  &mkp MCLK       &trans           &trans         &kp BACKSLASH  &mkp MB4  &none         &mkp MB5   &kp RIGHT_SHIFT
-&trans         &trans                                 &kp LA(ENTER)    &kp LC(ENTER)  &trans         &trans                  &trans     &trans
+&kp CARET      &mkp LCLK              &mmv MOVE_UP    &mkp RCLK        &trans         &kp LA(LEFT)  &gmail_clear  &kp K_APPLICATION  &kp TILDE      &kp LA(RIGHT)
+&kp GRAVE      &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans         &kp LEFT      &kp DOWN      &kp UP             &kp RIGHT      &obs_next_line
+&mt PIPE BSLH  &mt SQT DOUBLE_QUOTES  &mkp MCLK       &trans           &trans         &kp HOME      &kp END       &kp PAGE_UP        &kp PAGE_DOWN  &kp LC(SEMICOLON)
+&trans         &trans                                 &kp LA(ENTER)    &kp LC(ENTER)  &trans        &trans                           &trans         &trans
             >;
 
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;

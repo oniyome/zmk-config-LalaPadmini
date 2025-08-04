@@ -158,6 +158,35 @@
             bindings = <&mkp LCLK>;
             label = "MACRO_LTAP";
         };
+
+        esc_2: esc_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE>, <&macro_wait_time 300>, <&kp ESCAPE>;
+
+            label = "ESC_2";
+        };
+
+        obs_next_line: obs_next_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp I &kp RET &kp ESCAPE &kp UP &kp END>;
+            label = "OBS_NEXT_LINE";
+        };
+
+        obs_fix: obs_fix {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET &kp ESCAPE &kp ESCAPE &kp DOWN &kp HOME>;
+            label = "OBS_FIX";
+        };
+
+        toka: toka {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp O &kp K &kp A &kp UNDER &kp NUMBER_0 &kp NUMBER_0 &kp NUMBER_9 &kp NUMBER_2 &kp NUMBER_1 &kp RET>;
+            label = "TOKA";
+        };
     };
 
     keymap {

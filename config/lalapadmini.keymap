@@ -296,10 +296,10 @@
         MOUSE_R_LAYER {
             display-name = "mouse_r_layer";
             bindings = <
-&trans  &trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans       &mkp MCLK  &trans     &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &MACRO_LTAP  &mkp LCLK  &mkp RCLK  &mo 5
-&trans  &trans  &trans          &mkp MB3        &trans           &trans  &mkp MB4     &none      &mkp MB5   &trans
-&trans  &trans                  &trans          &trans           &trans  &trans                  &trans     &trans
+&trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans  &trans       &mkp MCLK  &trans     &trans
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &MACRO_LTAP  &mkp LCLK  &mkp RCLK  &mo 5
+&trans  &trans          &mkp MB3        &trans           &trans  &trans  &mkp MB4     &none      &mkp MB5   &trans
+&trans  &trans                          &trans           &trans  &trans  &trans                  &trans     &trans
             >;
         };
 

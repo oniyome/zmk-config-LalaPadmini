@@ -137,7 +137,7 @@
 
         CONBO_ESC {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
+            key-positions = <11 12>;
         };
 
         COMBO_TAB {
@@ -148,6 +148,31 @@
         COMBO_WIN {
             bindings = <&kp LWIN>;
             key-positions = <30 31>;
+        };
+
+        my_esc_2 {
+            bindings = <&esc_2>;
+            key-positions = <17 18>;
+        };
+
+        my_Win+Tab {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <2 1>;
+        };
+
+        my_Alt+Tab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <21 22>;
+        };
+
+        my_Tab {
+            bindings = <&kp TAB>;
+            key-positions = <12 13>;
+        };
+
+        my_obs_fix2 {
+            bindings = <&obs_fix2>;
+            key-positions = <16 17>;
         };
     };
 

@@ -68,9 +68,11 @@
 
 &mt { quick-tap-ms = <200>; };
 
-&lt { quick-tap-ms = <200>; };
+tapping-term-ms {
+    = <140>;};
 
-/ {
+/
+
     behaviors {
         // Encoder to Mouse Scroll
 
@@ -287,7 +289,7 @@
 
             bindings = <
 &kp LC(LS(S))  &kp LC(LS(TAB))  &kp LC(TAB)        &kp LC(LS(A))  &kp LC(LS(T))      &kp LC(NUMBER_9)  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &kp LC(NUMBER_4)
-&kp Z          &kp LC(PG_UP)    &kp LC(PAGE_DOWN)  &kp LC(LS(D))  &kp LC(BACKSLASH)  &kp LS(TAB)       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)
+&kp Z          &kp LC(PG_UP)    &kp LC(PAGE_DOWN)  &kp LC(LS(D))  &kp LC(BACKSLASH)  &kp B             &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)
 &trans         &kp LA(UP)       &kp LA(DOWN)       &kp F10        &trans             &trans            &trans            &trans            &trans            &toka
 &trans         &trans                              &trans         &trans             &trans            &trans                              &trans            &trans
             >;

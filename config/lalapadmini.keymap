@@ -326,7 +326,7 @@
         SCROLL_L_LAYER {
             display-name = "scroll_l_layer";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3
+&kp A   &trans  &trans  &trans  &trans  &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3
 &trans  &trans  &trans  &trans  &trans  &sys_reset    &bootloader   &studio_unlock  &bt BT_CLR    &bt BT_CLR_ALL
 &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans          &trans        &trans
 &trans  &trans          &trans  &trans  &trans        &trans                        &trans        &trans

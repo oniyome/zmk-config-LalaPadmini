@@ -68,280 +68,293 @@
 
 &mt { quick-tap-ms = <200>; };
 
+&lt {
+};
+
 tapping-term-ms {
-    = <140>;};
+    = <
+
+    140 = >;
+};
 
 /
 
-    behaviors {
-        // Encoder to Mouse Scroll
+behaviors {
+    // Encoder to Mouse Scroll
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <20>;
-        };
-
-        scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <20>;
-        };
-
-        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-
-            tap-ms = <20>;
-        };
-
-        scroll_right_left: behavior_sensor_rotate_mouse_wheel_right_left {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-
-            tap-ms = <20>;
-        };
-
-        volume_up_down: behavior_sensor_rotate_volume_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOLUME_UP>, <&kp C_VOLUME_DOWN>;
-
-            tap-ms = <20>;
-        };
-
-        mt2: mod_tap2 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        tap_dance_layer_1and2: tap_dance_layer_1and2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "td_mo12";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 2>;
-        };
+        tap-ms = <20>;
     };
 
-    combos {
-        compatible = "zmk,combos";
+    scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        CONBO_ESC {
-            bindings = <&kp ESCAPE>;
-            key-positions = <11 12>;
-        };
-
-        COMBO_TAB {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
-        };
-
-        COMBO_WIN {
-            bindings = <&kp LWIN>;
-            key-positions = <30 31>;
-        };
-
-        my_esc_2 {
-            bindings = <&esc_2>;
-            key-positions = <17 18>;
-        };
-
-        my_Win+Tab {
-            bindings = <&kp LG(TAB)>;
-            key-positions = <2 1>;
-        };
-
-        my_Alt+Tab {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <21 22>;
-        };
-
-        my_Tab {
-            bindings = <&kp TAB>;
-            key-positions = <12 13>;
-        };
-
-        my_obs_fix2 {
-            bindings = <&obs_fix2>;
-            key-positions = <16 17>;
-        };
+        tap-ms = <20>;
     };
 
-    macros {
-        MACRO_LTAP: MACRO_LTAP {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp LCLK>;
-            label = "MACRO_LTAP";
-        };
+    scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
-        esc_2: esc_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESCAPE>, <&macro_wait_time 300>, <&kp ESCAPE>;
-
-            label = "ESC_2";
-        };
-
-        obs_next_line: obs_next_line {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp I &kp RET &kp ESCAPE &kp UP &kp END>;
-            label = "OBS_NEXT_LINE";
-        };
-
-        obs_fix: obs_fix {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RET &kp ESCAPE &kp ESCAPE &kp DOWN &kp HOME>;
-            label = "OBS_FIX";
-        };
-
-        toka: toka {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp O &kp K &kp A &kp UNDER &kp NUMBER_0 &kp NUMBER_0 &kp NUMBER_9 &kp NUMBER_2 &kp NUMBER_1 &kp RET>;
-            label = "TOKA";
-        };
-
-        gmail_clear: gmail_clear {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp ESCAPE &kp G &kp I &kp G &kp I>;
-            label = "GMAIL_CLEAR";
-        };
-
-        obs_insert: obs_insert {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp ESCAPE &kp A &kp LC(SPACE)>;
-            label = "OBS_INSERT";
-        };
-
-        obs_space: obs_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp I &kp SPACE &kp ESCAPE>;
-            label = "OBS_SPACE";
-        };
-
-        obs_fix2: obs_fix2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RET &kp ESCAPE &kp ESCAPE>;
-            label = "OBS_FIX2";
-        };
+        tap-ms = <20>;
     };
 
-    keymap {
-        compatible = "zmk,keymap";
+    scroll_right_left: behavior_sensor_rotate_mouse_wheel_right_left {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-        DEFAULT_LAYER {
-            display-name = "Default";
-            sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
+        tap-ms = <20>;
+    };
 
-            bindings = <
+    volume_up_down: behavior_sensor_rotate_volume_up_down {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&kp C_VOLUME_UP>, <&kp C_VOLUME_DOWN>;
+
+        tap-ms = <20>;
+    };
+
+    mt2: mod_tap2 {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <200>;
+        require-prior-idle-ms = <125>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    tap_dance_layer_1and2: tap_dance_layer_1and2 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "td_mo12";
+        #binding-cells = <0>;
+        bindings = <&mo 1>, <&mo 2>;
+    };
+};
+
+combos {
+    compatible = "zmk,combos";
+
+    CONBO_ESC {
+        bindings = <&kp ESCAPE>;
+        key-positions = <11 12>;
+    };
+
+    COMBO_TAB {
+        bindings = <&kp TAB>;
+        key-positions = <10 11>;
+    };
+
+    COMBO_WIN {
+        bindings = <&kp LWIN>;
+        key-positions = <30 31>;
+    };
+
+    my_esc_2 {
+        bindings = <&esc_2>;
+        key-positions = <17 18>;
+    };
+
+    my_Win+Tab {
+        bindings = <&kp LG(TAB)>;
+        key-positions = <2 1>;
+    };
+
+    my_Alt+Tab {
+        bindings = <&kp LA(TAB)>;
+        key-positions = <21 22>;
+    };
+
+    my_Tab {
+        bindings = <&kp TAB>;
+        key-positions = <12 13>;
+    };
+
+    my_obs_fix2 {
+        bindings = <&obs_fix2>;
+        key-positions = <16 17>;
+    };
+};
+
+macros {
+    MACRO_LTAP: MACRO_LTAP {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&mkp LCLK>;
+        label = "MACRO_LTAP";
+    };
+
+    esc_2: esc_2 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp ESCAPE>, <&macro_wait_time 300>, <&kp ESCAPE>;
+
+        label = "ESC_2";
+    };
+
+    obs_next_line: obs_next_line {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp ESCAPE &kp I &kp RET &kp ESCAPE &kp UP &kp END>;
+        label = "OBS_NEXT_LINE";
+    };
+
+    obs_fix: obs_fix {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp RET &kp ESCAPE &kp ESCAPE &kp DOWN &kp HOME>;
+        label = "OBS_FIX";
+    };
+
+    toka: toka {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(T) &kp O &kp K &kp A &kp UNDER &kp NUMBER_0 &kp NUMBER_0 &kp NUMBER_9 &kp NUMBER_2 &kp NUMBER_1 &kp RET>;
+        label = "TOKA";
+    };
+
+    gmail_clear: gmail_clear {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp ESCAPE &kp ESCAPE &kp G &kp I &kp G &kp I>;
+        label = "GMAIL_CLEAR";
+    };
+
+    obs_insert: obs_insert {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp ESCAPE &kp ESCAPE &kp A &kp LC(SPACE)>;
+        label = "OBS_INSERT";
+    };
+
+    obs_space: obs_space {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp ESCAPE &kp I &kp SPACE &kp ESCAPE>;
+        label = "OBS_SPACE";
+    };
+
+    obs_fix2: obs_fix2 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp RET &kp ESCAPE &kp ESCAPE>;
+        label = "OBS_FIX2";
+    };
+};
+
+macros {
+};
+
+behaviors {
+};
+
+keymap {
+    compatible = "zmk,keymap";
+
+    DEFAULT_LAYER {
+        display-name = "Default";
+        sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
+
+        bindings = <
 &mt LEFT_ALT Q     &kp W   &kp E  &kp R             &kp T         &kp Y            &kp U        &kp I      &kp O       &mt LEFT_WIN P
 &mt2 LEFT_SHIFT A  &kp S   &kp D  &kp F             &kp G         &kp H            &kp J        &kp K      &kp L       &mt LEFT_SHIFT MINUS
 &kp Z              &kp X   &kp C  &kp V             &kp B         &kp N            &kp M        &kp COMMA  &kp PERIOD  &mt LS(SLASH) SLASH
 &trans             &trans         &mt2 LCTRL ENTER  &lt 1 DELETE  &lt 2 BACKSPACE  &lt 3 SPACE             &to 2       &mo 7
-            >;
-        };
+        >;
+    };
 
-        SECONDARY_LAYER {
-            display-name = "secondary_layer";
-            sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
+    SECONDARY_LAYER {
+        display-name = "secondary_layer";
+        sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
-            bindings = <
+        bindings = <
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH     &kp DOLLAR                   &kp PERCENT                    &kp EQUAL            &mt AMPERSAND NUMBER_7    &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &kp PLUS
 &kp F2           &kp F4       &kp F6       &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &mt SEMICOLON COLON  &mt DOLLAR NUMBER_4       &mt PERCENT NUMBER_5   &mt LCTRL NUMBER_6             &kp MINUS
 &caps_word       &trans       &kp LS(F10)  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp NUMBER_0         &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2   &mt HASH NUMBER_3              &trans
 &trans           &trans                    &kp LC(NUMBER_1)             &trans                         &obs_insert          &obs_space                                       &trans                         &trans
-            >;
-        };
+        >;
+    };
 
-        TERTIARY_LAYER {
-            display-name = "tertiary_layer";
-            bindings = <
+    TERTIARY_LAYER {
+        display-name = "tertiary_layer";
+        bindings = <
 &kp CARET      &mkp MB1               &mmv MOVE_UP    &mkp MB2         &trans         &kp LA(LEFT)  &gmail_clear  &kp K_APPLICATION  &kp TILDE      &kp LA(RIGHT)
 &kp GRAVE      &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans         &kp LEFT      &kp DOWN      &kp UP             &kp RIGHT      &obs_next_line
 &mt PIPE BSLH  &mt SQT DOUBLE_QUOTES  &mkp MB3        &trans           &trans         &kp HOME      &kp END       &kp PAGE_UP        &kp PAGE_DOWN  &kp LC(SEMICOLON)
 &trans         &trans                                 &kp LA(ENTER)    &kp LC(ENTER)  &trans        &trans                           &to 0          &trans
-            >;
+        >;
 
-            sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
-        };
+        sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
+    };
 
-        SYSTEM_LAYER {
-            display-name = "system_layer";
-            sensor-bindings = <&volume_up_down>, <&volume_up_down>;
+    SYSTEM_LAYER {
+        display-name = "system_layer";
+        sensor-bindings = <&volume_up_down>, <&volume_up_down>;
 
-            bindings = <
+        bindings = <
 &kp LC(LS(S))  &kp LC(LS(TAB))  &kp LC(TAB)        &kp LC(LS(A))  &kp LC(LS(T))      &kp LC(NUMBER_9)  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &kp LC(NUMBER_4)
 &kp Z          &kp LC(PG_UP)    &kp LC(PAGE_DOWN)  &kp LC(LS(D))  &kp LC(BACKSLASH)  &kp B             &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)
 &trans         &kp LA(UP)       &kp LA(DOWN)       &kp F10        &trans             &trans            &trans            &trans            &trans            &toka
 &trans         &trans                              &trans         &trans             &trans            &trans                              &trans            &trans
-            >;
-        };
+        >;
+    };
 
-        MOUSE_R_LAYER {
-            display-name = "mouse_r_layer";
-            bindings = <
+    MOUSE_R_LAYER {
+        display-name = "mouse_r_layer";
+        bindings = <
 &trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans  &trans       &mkp MCLK  &trans     &trans
 &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &MACRO_LTAP  &mkp LCLK  &mkp RCLK  &mo 5
 &trans  &trans          &mkp MB3        &trans           &trans  &trans  &mkp MB4     &none      &mkp MB5   &trans
 &trans  &trans                          &mo 5            &trans  &trans  &trans                  &trans     &trans
-            >;
-        };
+        >;
+    };
 
-        SCROLL_R_LAYER {
-            display-name = "scroll_r_layer";
-            bindings = <
+    SCROLL_R_LAYER {
+        display-name = "scroll_r_layer";
+        bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans  &trans  &trans  &trans          &trans  &trans
-            >;
-        };
+        >;
+    };
 
-        MOUSE_L_LAYER {
-            display-name = "mouse_l_layer";
-            bindings = <
+    MOUSE_L_LAYER {
+        display-name = "mouse_l_layer";
+        bindings = <
 &trans  &trans       &mkp MCLK  &trans     &trans  &trans  &trans  &trans  &trans  &trans
 &mo 7   &MACRO_LTAP  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &mkp MB4     &trans     &mkp MB5   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans     &trans  &trans  &trans          &trans  &trans
-            >;
-        };
+        >;
+    };
 
-        SCROLL_L_LAYER {
-            display-name = "scroll_l_layer";
-            bindings = <
+    SCROLL_L_LAYER {
+        display-name = "scroll_l_layer";
+        bindings = <
 &trans  &trans  &trans  &trans  &trans  &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3
 &trans  &trans  &trans  &trans  &trans  &sys_reset    &bootloader   &studio_unlock  &bt BT_CLR    &bt BT_CLR_ALL
 &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans          &trans        &trans
 &trans  &trans          &trans  &trans  &trans        &trans                        &trans        &trans
-            >;
-        };
+        >;
     };
+};
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
+conditional_layers {
+    compatible = "zmk,conditional-layers";
 
-        System_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
+    System_layer {
+        if-layers = <1 2>;
+        then-layer = <3>;
     };
+};
+
 };

@@ -256,7 +256,7 @@
 &mt LEFT_ALT Q     &kp W   &kp E  &kp R             &kp T         &kp Y            &kp U  &kp I      &kp O       &mt LEFT_WIN P
 &mt2 LEFT_SHIFT A  &kp S   &kp D  &kp F             &kp G         &kp H            &kp J  &kp K      &kp L       &mt LEFT_SHIFT MINUS
 &kp Z              &kp X   &kp C  &kp V             &kp B         &kp N            &kp M  &kp COMMA  &kp PERIOD  &mt LS(SLASH) SLASH
-&trans             &trans         &mt2 LCTRL ENTER  &lt 1 DELETE  &lt 2 BACKSPACE  &mo 3             &to 2       &mo 7
+&trans             &trans         &mt2 LCTRL ENTER  &lt 1 DELETE  &lt 2 BACKSPACE  &mo 5             &to 2       &mo 7
             >;
         };
 
@@ -310,7 +310,7 @@
             display-name = "scroll_r_layer";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp Z   &trans  &trans  &trans  &trans  &kp A   &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans  &trans  &trans  &trans          &trans  &trans
             >;

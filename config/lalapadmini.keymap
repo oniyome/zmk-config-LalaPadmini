@@ -290,7 +290,7 @@
 
             bindings = <
 &kp LC(LS(S))  &kp LC(LS(TAB))  &kp LC(TAB)        &kp LC(LS(A))  &kp LC(LS(T))      &kp LC(NUMBER_9)  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &kp LC(NUMBER_4)
-&kp Z          &kp LC(PG_UP)    &kp LC(PAGE_DOWN)  &kp LC(LS(D))  &kp LC(BACKSLASH)  &kp B             &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)
+&trans         &kp LC(PG_UP)    &kp LC(PAGE_DOWN)  &kp LC(LS(D))  &kp LC(BACKSLASH)  &trans            &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)
 &trans         &kp LA(UP)       &kp LA(DOWN)       &kp F10        &trans             &trans            &trans            &trans            &trans            &toka
 &trans         &trans                              &trans         &trans             &trans            &trans                              &trans            &trans
             >;
@@ -299,20 +299,20 @@
         MOUSE_R_LAYER {
             display-name = "mouse_r_layer";
             bindings = <
-&trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans  &trans       &mkp MCLK  &trans     &trans
-&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &MACRO_LTAP  &mkp LCLK  &mkp RCLK  &mo 5
-&trans  &trans          &mkp MB3        &trans           &trans  &trans  &mkp MB4     &none      &mkp MB5   &trans
-&trans  &trans                          &mo 5            &trans  &trans  &trans                  &trans     &trans
+&trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 5
+&trans  &mkp MB4        &mkp MB3        &mkp MB5         &trans  &trans  &mkp MB4        &mkp MB3        &mkp MB5         &trans
+&trans  &trans                          &mo 5            &trans  &trans  &trans                          &trans           &trans
             >;
         };
 
         SCROLL_R_LAYER {
             display-name = "scroll_r_layer";
             bindings = <
-&kp LC(LS(S))  &kp LC(LS(TAB))  &kp LC(TAB)        &trans  &trans  &kp LC(N9)  &kp LC(N1)  &trans  &trans      &trans
-&kp Z          &kp LC(PG_UP)    &kp LC(PAGE_DOWN)  &trans  &trans  &kp A       &kp LG(N1)  &trans  &kp LC(N3)  &trans
-&trans         &trans           &trans             &trans  &trans  &trans      &trans      &trans  &trans      &trans
-&trans         &trans                              &trans  &trans  &trans      &trans              &trans      &trans
+&kp LC(LS(S))  &kp LC(LS(TAB))  &kp LC(TAB)        &kp LC(LS(A))  &kp LC(LS(T))      &kp LC(N9)  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)
+&kp Z          &kp LC(PG_UP)    &kp LC(PAGE_DOWN)  &kp LC(LS(D))  &kp LC(BACKSLASH)  &trans      &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)
+&trans         &kp LA(UP)       &kp LA(DOWN)       &kp F10        &trans             &trans      &trans      &trans      &trans      &toka
+&trans         &trans                              &trans         &trans             &trans      &trans                  &trans      &trans
             >;
         };
 

@@ -68,17 +68,11 @@
 
 &mt { quick-tap-ms = <200>; };
 
-&lt {
-};
+&lt { tapping-term-ms = <140>; };
 
-tapping-term-ms {
-    = <
-
-    140 = >;
-};
 
 /
-
+{
 behaviors {
     // Encoder to Mouse Scroll
 

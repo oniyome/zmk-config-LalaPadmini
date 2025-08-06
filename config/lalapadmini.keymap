@@ -25,7 +25,7 @@
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_xy_scaler 3 2>,
-        <&zip_temp_layer MOUSE_R_LAYER 100>; // default 300, 600 slow
+        <&zip_temp_layer MOUSE_R_LAYER 300>; 
 
     lowspeedmode {
         layers = <SECONDARY_LAYER>;

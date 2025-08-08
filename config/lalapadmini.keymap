@@ -178,6 +178,11 @@
             bindings = <&obs_fix2>;
             key-positions = <16 17>;
         };
+
+        my_kanji {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <7 8>;
+        };
     };
 
     macros {

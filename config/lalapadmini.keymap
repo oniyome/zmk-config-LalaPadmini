@@ -260,7 +260,7 @@
 &mt LEFT_ALT Q     &kp W        &kp E        &kp R             &kp T         &kp Y            &kp U        &kp I      &kp O       &mt LEFT_WIN P
 &mt2 LEFT_SHIFT A  &kp S        &kp D        &kp F             &kp G         &kp H            &kp J        &kp K      &kp L       &mt LEFT_SHIFT MINUS
 &mt LA(SPACE) Z    &mt LC(X) X  &mt LC(C) C  &mt LC(V) V       &mt LC(B) B   &kp N            &kp M        &kp COMMA  &kp PERIOD  &mt LS(SLASH) SLASH
-&trans             &trans                    &mt2 LCTRL ENTER  &lt 1 DELETE  &lt 2 BACKSPACE  &lt 5 SPACE             &to 2       &mo 7
+&kp LC(N1)         &trans                    &mt2 LCTRL ENTER  &lt 1 DELETE  &lt 2 BACKSPACE  &lt 5 SPACE             &to 2       &mo 7
             >;
         };
 
